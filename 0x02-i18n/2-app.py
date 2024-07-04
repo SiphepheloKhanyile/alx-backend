@@ -13,6 +13,7 @@ class Config:
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
+
 app = Flask(__name__)
 app.config.from_object(Config)
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'fr', 'es']
@@ -22,6 +23,7 @@ babel = Babel(app)
 def hello_world():
     """to run on the website"""
     return render_template('2-index.html')
+
 
 def get_locale() -> str:
     """
